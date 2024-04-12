@@ -25,7 +25,7 @@ The "adopt-me pets" project is a React application designed to facilitate pet ad
 
 - Frontend: React, React Router, react-query
 - Build Tool: Vite
-- Styling: CSS (not mentioned in the provided details, assuming it's used)
+- Styling: CSS
 - Version Control: Git
 
 **Installation**
@@ -33,4 +33,26 @@ The "adopt-me pets" project is a React application designed to facilitate pet ad
 Clone the repository:
 
 ```bash
+git clone https://github.com/Srushti-9/adopt-me-pets.git
+```
 
+Install dependencies:
+
+```sh
+cd adopt-me-pets
+npm install
+```
+
+Start the development server:
+
+```sh
+npm run dev
+```
+
+## Usage
+
+Once the development server is running, navigate to the localhost URL provided in the terminal. From there, you can explore the features and functionalities of the "adopt-me pets" application.
+
+**Learned from Course**
+
+This project was developed as part of the COMPLETE INTRO TO REACT V8 course by Brian Holt , where I learned the fundamentals of React and various technologies used in modern React development.
