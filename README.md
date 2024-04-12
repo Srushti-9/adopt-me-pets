@@ -16,9 +16,12 @@ The "adopt-me pets" project is a React application designed to facilitate pet ad
 - **React Capabilities**: Explored various capabilities of React for building interactive and dynamic web applications.
 - **React Router**: Implemented React Router for client-side routing, enabling navigation between different views.
 - **react-query**: Integrated react-query for efficient data fetching and management, enhancing the application's performance.
-- **Uncontrolled Forms**: Implemented uncontrolled forms for handling user input in a simpler and more efficient manner.
+- **Uncontrolled Forms**: Implemented uncontrolled forms handling techniques for managing form state and user input, improving form usability and performance.
 - **Class Components**: Utilized class components for scenarios where class-based syntax is preferred or necessary.
 - **Special Case React Tools**: Utilized special case React tools such as error boundaries, portals, refs, and context for handling specific use cases and improving application robustness and flexibility.
+- **Error Boundaries Implementation**: Implemented error boundaries to gracefully handle and recover from JavaScript errors within the application, ensuring a smooth user experience.
+- **Portals and Refs Usage**: Leveraged portals and refs to create advanced UI features such as modals, tooltips, and dropdowns, enhancing the flexibility and functionality of the application.
+- **Context Management**: Implemented context API for state management and sharing data between components, ensuring a clean and efficient data flow within the application.
 
 **Technologies Used**
 
