@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState , useDeferredValue, useMemo} from "react";
 import AdoptedPetContext from "./AdoptedPetContext";
 import useBreedList from "./useBreedList";
 import Results from "./Results";
@@ -19,6 +19,13 @@ const SearchParams = () => {
 
   const results = useQuery(["search", requestParams], fetchSearch);
   const pets = results?.data?.pets ?? [];
+
+  /* a user clicked a button to adopt a pet or re-search for something else, drop rendering other pets and focus on what the user asked for. have low priortiy for pets list render using useDefferedValue*/
+  const deferredPets = useDeferredValue(pets);
+  const renderedPets = useMemo(
+    () => <Results pets={deferredPets} />,
+    [deferredPets]
+  );
 
   const [adoptedPet] = useContext(AdoptedPetContext);
   return (
@@ -80,7 +87,9 @@ const SearchParams = () => {
         <button>Submit</button>
       </form>
 
-      <Results pets={pets} />
+      {
+  renderedPets
+}
     </div>
   );
 };
