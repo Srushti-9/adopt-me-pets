@@ -22,6 +22,7 @@ The "adopt-me pets" project is a React application designed to facilitate pet ad
 - **Error Boundaries Implementation**: Implemented error boundaries to gracefully handle and recover from JavaScript errors within the application, ensuring a smooth user experience.
 - **Portals and Refs Usage**: Leveraged portals and refs to create advanced UI features such as modals, tooltips, and dropdowns, enhancing the flexibility and functionality of the application.
 - **Context Management**: Implemented context API for state management and sharing data between components, ensuring a clean and efficient data flow within the application.
+- **Lazy Loading**: Implemented lazy loading to load components or assets asynchronously, improving initial loading time and user experience.
 
 **Technologies Used**
 
