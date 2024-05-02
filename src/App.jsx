@@ -3,8 +3,9 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { useState, lazy, Suspense } from "react";
-import AdoptedPetContext from "./AdoptedPetContext";
+import { lazy, Suspense } from "react";
+import { Provider } from "react-redux";
+import store from "./store";
 
 //Added code spliting - lazy import
 const Details = lazy(() => import("./Details"));
@@ -20,12 +21,10 @@ const queryClient = new QueryClient({
 });
 
 const App = () => {
-  const adoptedPet = useState(null);
-
   return (
     <div>
       <BrowserRouter>
-        <AdoptedPetContext.Provider value={adoptedPet}>
+        <Provider store={store}>
           <QueryClientProvider client={queryClient}>
             <Suspense
               fallback={
@@ -43,7 +42,7 @@ const App = () => {
               </Routes>
             </Suspense>
           </QueryClientProvider>
-        </AdoptedPetContext.Provider>
+        </Provider>
       </BrowserRouter>
     </div>
   );
